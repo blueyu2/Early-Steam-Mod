@@ -4,6 +4,7 @@ import com.blueyu2.steamMod.block.BlockPress;
 import com.blueyu2.steamMod.container.ContainerPress;
 import com.blueyu2.steamMod.recipe.RecipesPress;
 import com.blueyu2.steamMod.item.crafting.RecipePress;
+import com.blueyu2.steamMod.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -35,7 +36,7 @@ public class TileEntityPress extends TileEntitySM implements ISidedInventory {
 
     @Override
     public int[] getAccessibleSlotsFromSide(int side) {
-        return side == ForgeDirection.DOWN.ordinal() ? new int[]{outputIndex} : new int[]{inputIndex};
+        return side == ForgeDirection.DOWN.ordinal() ? new int[]{outputIndex} : side == ForgeDirection.UP.ordinal() ? new int[]{inputIndex} : new int[]{fuelIndex};
     }
 
     @Override
@@ -141,7 +142,7 @@ public class TileEntityPress extends TileEntitySM implements ISidedInventory {
 
     @Override
     public boolean isItemValidForSlot(int slotIndex, ItemStack itemStack) {
-        return false;
+        return slotIndex != 2 && (slotIndex != 1 || TileEntityFurnace.isItemFuel(itemStack));
     }
 
     @Override

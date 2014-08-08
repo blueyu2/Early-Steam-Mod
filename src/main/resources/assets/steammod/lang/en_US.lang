@@ -1,0 +1,15 @@
+# Item localizations
+item.steammod:crushedOre.crushedCoal.name=Crushed Coal Ore
+item.steammod:crushedOre.crushedDiamond.name=Crushed Diamond Ore
+item.steammod:crushedOre.crushedEmerald.name=Crushed Emerald Ore
+item.steammod:crushedOre.crushedGold.name=Crushed Gold Ore
+item.steammod:crushedOre.crushedIron.name=Crushed Iron Ore
+item.steammod:crushedOre.crushedLapis.name=Crushed Lapis Lazuli Ore
+item.steammod:crushedOre.crushedQuartz.name=Crushed Nether Quartz Ore
+item.steammod:crushedOre.crushedRedstone.name=Crushed Redstone Ore
+# Block localizations
+tile.steammod:basicPress.name=Press
+# GUI localizations
+container.steammod:basicPress=Press
+
+itemGroup.steammod=Steam Mod

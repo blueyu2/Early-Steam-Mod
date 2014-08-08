@@ -2,6 +2,7 @@ package com.blueyu2.steamMod;
 
 import com.blueyu2.steamMod.handler.GuiHandler;
 import com.blueyu2.steamMod.init.ModBlocks;
+import com.blueyu2.steamMod.init.ModItems;
 import com.blueyu2.steamMod.init.Recipes;
 import com.blueyu2.steamMod.proxy.IProxy;
 import cpw.mods.fml.common.Mod;
@@ -31,6 +32,7 @@ public class SteamMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
+        ModItems.init();
         ModBlocks.init();
     }
 
